@@ -1,0 +1,39 @@
+@media screen and (min-width:992px) {
+    .nav-item {
+        line-height: 80px;
+    }
+}
+
+nav {
+    background-color: #112338;
+}
+
+.rounded-circle {
+    height: 42px;
+    width: 42px;
+}
+
+.footer-top, footer{
+    background-color: #112338;
+}
+
+.footer-bottom{
+    background-color: #0d1c2c;
+}
+
+#title{
+    padding: 220px;
+    margin: 0;
+    text-align: center;
+    font-variant: small-caps;
+    font-size: 55px;
+    font-weight: bold;
+    -webkit-text-stroke: 0.5px white;
+    text-shadow: 0 0 10px #0d1c2c, 0 0 20px #0d1c2c, 0 0 30px #0d1c2c, 0 0 40px #0d1c2c, 0 0 50px #0d1c2c, 0 0 60px #0d1c2c, 0 0 70px #0d1c2c;
+    border: solid white;
+}
+
+header{
+    background-image: url(img/hands.png);
+    background-color: rgb(226, 226, 226);
+}
