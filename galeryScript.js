@@ -1,16 +1,38 @@
 const imageData = [];
 const numbers = [];
+const itemsPerPage = 9;
+let currentPage = 1;
+let currentImages = new Array();
 
-for (let i = 1; i <= 9; i++) {
-    numbers.push(i);
-}
+window.onload = function (event) {
+    for (let i = 1; i <= 9; i++) {
+        numbers.push(i);
+    }
 
-for (let i = 0; i < 3; i++) {
-    shuffleArray(numbers);
-    numbers.forEach(element => {
-        imageData.push("img/" + element + ".jpg")
-    });
-}
+    for (let i = 0; i < 3; i++) {
+        shuffleArray(numbers);
+        numbers.forEach(element => {
+            imageData.push("img/" + element + ".jpg")
+        });
+    }
+
+    const carouselContainer = document.getElementById("carouselContainer");
+
+    for (let i = 0; i < imageData.length; i++) {
+        const imageUrl = imageData[i];
+        const slide = `
+            <div class="carousel-item ${i == 0 ? 'active' : ''}">
+                <img src="${imageUrl}" class="d-block" id="slide-${i + 1}" alt="Slide ${i + 1}">
+            </div>
+        `;
+        carouselContainer.innerHTML += slide;
+    }
+
+    displayImages();
+    displayPagination();
+};
+
+
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -18,10 +40,6 @@ function shuffleArray(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
 }
-
-const itemsPerPage = 9;
-let currentPage = 1;
-let currentImages = new Array();
 
 function displayImages() {
     const galleryContainer = document.getElementById("gallery");
@@ -35,7 +53,7 @@ function displayImages() {
         const card = `
             <div class="col">
                 <div class="card">
-                    <img src="${imageUrl}" class="card-img-top galleryImg" alt="Image ${i + 1}" onclick="imageClick('${imageUrl}')">
+                    <img src="${imageUrl}" class="card-img-top galleryImg" alt="Image ${i + 1}" onclick='imageClick("${i}")'>
                 </div>
             </div>
         `;
@@ -56,26 +74,24 @@ function displayPagination() {
     }
 }
 
-function closeModal() {
-    var modal = document.getElementById('modal');
-    modal.style.display = 'none';
-    document.body.style.overflow = 'auto';
-}
-
 function changePage(page) {
     currentPage = page;
     displayImages();
     displayPagination();
 }
 
-function imageClick(imageSource) {
-    var modal = document.getElementById('modal');
-    var modalContent = document.getElementById('modal-content');
-
+function imageClick(imageId) {
+    var overlayPanel = document.getElementById("overlayPanel");
+    overlayPanel.style.display = 'flex';
     document.body.style.overflow = 'hidden';
-    modal.style.display = 'block';
-    modalContent.src = imageSource;
+
+    var carousel = $('#carouselExample');
+    carousel.find('.carousel-item.active').removeClass('active');
+    carousel.find('.carousel-item').eq(imageId).addClass('active');
 }
 
-displayImages();
-displayPagination();
+function closePanel() {
+    var overlayPanel = document.getElementById("overlayPanel");
+    document.body.style.overflow = 'auto';
+    overlayPanel.style.display = 'none';
+}
