@@ -4,7 +4,7 @@
     }
 }
 
-body{
+body {
     background-image: url(img/bg.jpg);
 }
 
@@ -12,7 +12,7 @@ nav {
     background-color: #112338;
 }
 
-.nav-link{
+.nav-link {
     font-size: large;
 }
 
@@ -21,15 +21,16 @@ nav {
     width: 42px;
 }
 
-.footer-top, footer{
+.footer-top,
+footer {
     background-color: #112338;
 }
 
-.footer-bottom{
+.footer-bottom {
     background-color: #0d1c2c;
 }
 
-#title{
+#title {
     padding-top: 220px;
     padding-bottom: 220px;
     margin: 0;
@@ -41,14 +42,14 @@ nav {
     -webkit-text-stroke: 2px black;
 }
 
-header{
+header {
     background-image: url(img/hands.png);
     background-color: rgb(226, 226, 226);
     border: #112338 solid 5px;
     box-shadow: 0 0 20px #112338;
 }
 
-main{
+main {
     background-color: rgba(225, 225, 225, 0.5);
     box-shadow: 0 0 20px rgb(225, 225, 225);
     border-radius: 25px;
@@ -60,7 +61,7 @@ main{
     object-fit: cover;
 }
 
-.card-footer a{
+.card-footer a {
     background-color: #a0c3eb;
     border: solid #88a6c8 1px;
 }
@@ -69,17 +70,17 @@ main{
     display: block;
     text-align: center;
     overflow: hidden;
-    white-space: nowrap; 
+    white-space: nowrap;
     text-transform: uppercase;
 }
 
-#cim > h1 {
+#cim>h1 {
     position: relative;
     display: inline-block;
 }
 
-#cim > h1:before,
-#cim > h1:after {
+#cim>h1:before,
+#cim>h1:after {
     content: "";
     position: absolute;
     top: 50%;
@@ -88,40 +89,40 @@ main{
     background: black;
 }
 
-#cim > h1:before {
+#cim>h1:before {
     right: 100%;
     margin-right: 15px;
 }
 
-#cim > h1:after {
+#cim>h1:after {
     left: 100%;
     margin-left: 15px;
 }
 
-.partner{
+.partner {
     background-color: white;
     box-shadow: 0 0 20px white;
 }
 
-.page-link{
+.page-link {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.page-link{
+.page-link {
     color: black;
     width: 50px;
     text-align: center;
     cursor: pointer;
 }
 
-.active>.page-link{
+.active>.page-link {
     background-color: #a0c3eb;
     border-color: #88a6c8;
     color: white;
 }
 
-.galleryImg{
+.galleryImg {
     border-radius: 5px;
     cursor: pointer;
 }
@@ -137,39 +138,39 @@ main{
     align-items: center;
     justify-content: center;
     z-index: 9999;
-  }
+}
 
-  .carousel-container {
+.carousel-container {
     max-width: 80%;
     width: 100%;
     max-height: 80%;
-  }
+}
 
-  .carousel-item img {
+.carousel-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+}
 
-  .carousel-control-prev,
-  .carousel-control-next {
+.carousel-control-prev,
+.carousel-control-next {
     width: 5%;
-  }
+}
 
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
     height: 100%;
-  }
+}
 
-  .carousel-control-prev {
+.carousel-control-prev {
     left: 0;
-  }
+}
 
-  .carousel-control-next {
+.carousel-control-next {
     right: 0;
-  }
+}
 
-  .close {
+.close {
     color: white;
     position: absolute;
     top: -10px;
@@ -177,4 +178,28 @@ main{
     font-size: 65px;
     font-weight: bold;
     cursor: pointer;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+#container hr {
+    width: 100%;
+    margin: 10px 0;
+    border: 0;
+    border-top: 2px solid white;
+}
+
+#container p {
+    padding: 10px;
+    margin: 0;
+}
+
+.adoImg{
+    border-radius: 10px;
+    border: solid black 2px;
 }
