@@ -95,3 +95,5 @@ function closePanel() {
     document.body.style.overflow = 'auto';
     overlayPanel.style.display = 'none';
 }
+
+document.getElementsByTagName("main")[0].classList.add("loaded");

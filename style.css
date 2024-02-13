@@ -54,6 +54,9 @@ main {
     box-shadow: 0 0 20px rgb(225, 225, 225);
     border-radius: 25px;
     margin: 40px;
+
+    opacity : 0;
+    transition : opacity 1s ease; 
 }
 
 .card-img-top {
@@ -202,4 +205,8 @@ main {
 .adoImg{
     border-radius: 10px;
     border: solid black 2px;
+}
+
+.loaded {
+   opacity : 1;
 }
