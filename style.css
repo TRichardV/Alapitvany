@@ -56,7 +56,6 @@ main {
     margin: 40px;
 
     opacity : 0;
-    transition : opacity 1s ease; 
 }
 
 .card-img-top {
@@ -208,5 +207,14 @@ main {
 }
 
 .loaded {
-   opacity : 1;
+    animation: fadeInAnimation 0.8s ease forwards;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
